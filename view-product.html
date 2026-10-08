@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | New Bright Button Palace</title>
+  <meta name="description" content="View product specifications, wholesale pricing, and place tailoring material orders.">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Top Utility Announcement -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Wholesale & Retail Tailoring Accessories Hub</span>
+      </div>
+      <div class="top-bar-right">
+        <span>GST Invoice Available</span>
+        <a href="tel:+919876543210">📞 Call: 98765 43210</a>
+      </div>
+    </div>
+
+    <!-- Main Store Header -->
+    <header class="main-header">
+      <div class="header-top">
+        <a href="index.html" class="brand-group">
+          <div class="brand-logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="9" cy="9" r="1.5"/>
+              <circle cx="15" cy="9" r="1.5"/>
+              <circle cx="9" cy="15" r="1.5"/>
+              <circle cx="15" cy="15" r="1.5"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1>New Bright Button Palace</h1>
+            <span>Tailoring & Fashion Accessories</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Bar -->
+        <nav class="header-nav">
+          <a href="index.html" class="header-nav-link">Home</a>
+          <a href="products.html" class="header-nav-link">Collection</a>
+          <a href="contact.html" class="header-nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn-account-header" id="headerAccountBtn" title="Account">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span id="headerAccountText">Account</span>
+          </a>
+          <a href="cart.html" class="btn-cart-header" id="headerCartBtn" onclick="if(window.innerWidth < 768){ toggleCartDrawer(true); return false; }" title="View Cart">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="cart-counter" id="cartBadge">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb Bar -->
+    <div class="page-header-banner" style="padding: 16px 16px 14px;">
+      <div class="breadcrumbs" style="margin-bottom:0;">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="products.html">Collection</a>
+        <span>/</span>
+        <span id="breadcrumbTitle" style="color:#ffffff;">Product Details</span>
+      </div>
+    </div>
+
+    <!-- Product Detail Container -->
+    <main class="prod-detail-wrap" id="productDetailContent">
+      <div style="text-align:center; padding: 60px 16px; color: var(--text-muted);">
+        Loading product details...
+      </div>
+    </main>
+
+    <!-- Footer Information -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>New Bright Button Palace</h4>
+          <p>Your premier destination for wholesale and retail tailoring accessories, garment trimmings, zips, scissors, embroidery yarns, and custom buttons.</p>
+          <p><strong>Store Address:</strong> Main Bazaar Market, Tailoring Hub, India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <p><a href="index.html" style="color:#94a3b8; text-decoration:none;">› Home</a></p>
+          <p><a href="products.html" style="color:#94a3b8; text-decoration:none;">› Full Product Collection</a></p>
+          <p><a href="contact.html" style="color:#94a3b8; text-decoration:none;">› Contact Us & Wholesale Inquiries</a></p>
+          <p><a href="login.html" style="color:#94a3b8; text-decoration:none;">› My Account & Order History</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Order & Support</h4>
+          <p>⚡ Bulk orders & custom dye requirements</p>
+          <p>📦 Daily dispatches across India via DTDC / SpeedPost</p>
+          <p>💬 WhatsApp Orders: <strong>+91 98765 43210</strong></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 New Bright Button Palace. All rights reserved. Designed for professional tailors, boutiques & sewing enthusiasts.
+      </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="nav-tab">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="nav-tab active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Collection</span>
+      </a>
+      <a href="javascript:void(0)" class="nav-tab" onclick="toggleCartDrawer(true)">
+        <div style="position:relative;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="mobileBottomCartBadge" style="position:absolute; top:-6px; right:-8px; background:var(--action-btn-grad); color:#fff; font-size:10px; font-weight:800; border-radius:10px; padding:1px 5px;">0</span>
+        </div>
+        <span>Cart</span>
+      </a>
+      <a href="contact.html" class="nav-tab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Contact</span>
+      </a>
+      <a href="login.html" class="nav-tab" id="mobileAccountTab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Account</span>
+      </a>
+    </nav>
+
+  </div><!-- end app-container -->
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop" onclick="toggleCartDrawer(false)"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Your Sewing Cart
+      </h2>
+      <button class="btn-close-cart" onclick="toggleCartDrawer(false)">&times;</button>
+    </div>
+    
+    <div class="cart-free-delivery-banner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span>Free Delivery on tailoring orders above ₹499!</span>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsContainer"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Estimated Delivery:</span>
+        <span style="color:#059669; font-weight:700;">FREE Today</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Amount:</span>
+        <span id="cartTotalPrice">₹0</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout" style="text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Proceed to Checkout (<span id="cartTotalItemsCount">0 items</span>)
+      </a>
+      <a href="#" id="whatsappCheckoutLink" class="btn-whatsapp" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.776.819 2.796.819 3.179 0 5.765-2.586 5.765-5.766.001-3.18-2.585-5.766-5.765-5.766zm9.969 5.766c0 5.485-4.467 9.953-9.969 9.953-1.745 0-3.38-.456-4.812-1.251l-5.219 1.36 1.393-5.088c-.896-1.492-1.401-3.237-1.401-5.092 0-5.484 4.467-9.953 9.969-9.953 5.502 0 9.969 4.469 9.969 9.953z"/></svg>
+        Order via WhatsApp Instant
+      </a>
+    </div>
+  </aside>
+
+  <!-- Core Scripts -->
+  <script src="config.js"></script>
+  <script src="cart.js"></script>
+
+  <script>
+    // Local catalog for direct ID resolution
+    const localProducts = {
+      "zip-8inch": {
+        id: "zip-8inch",
+        title: "Zip 8 Inch Invisible Zippers for Sewing Skirt, Frocks & Blouse (Pack of 25 Assorted Colors)",
+        category: "Zippers",
+        discount: "-88%",
+        price: 99,
+        originalPrice: 800,
+        dealText: "Special Workshop Deal",
+        rating: "4.8",
+        reviews: "1,420",
+        material: "Nylon Teeth & Polyester Tape",
+        size: "8 Inches (20 cm)",
+        stock: 500,
+        colors: "25 Multicolor Rainbow Assortment",
+        desc: "High quality invisible zippers crafted specifically for women's ethnic wear, skirts, gowns, blouses and dresses. The ultra-smooth nylon teeth ensure seamless concealment along garment seams with zero friction snagging.",
+        variants: [
+          { title: "Pack of 25 (8 inch)", price: 99, originalPrice: 800 },
+          { title: "Pack of 50 (8 inch)", price: 189, originalPrice: 1500 },
+          { title: "Pack of 100 Wholesale", price: 349, originalPrice: 2800 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><rect x="25" y="15" width="10" height="170" rx="3" fill="#ef4444"/><rect x="42" y="15" width="10" height="170" rx="3" fill="#f97316"/><rect x="59" y="15" width="10" height="170" rx="3" fill="#eab308"/><rect x="76" y="15" width="10" height="170" rx="3" fill="#84cc16"/><rect x="93" y="15" width="10" height="170" rx="3" fill="#10b981"/><rect x="110" y="15" width="10" height="170" rx="3" fill="#06b6d4"/><rect x="127" y="15" width="10" height="170" rx="3" fill="#3b82f6"/><rect x="144" y="15" width="10" height="170" rx="3" fill="#8b5cf6"/><rect x="161" y="15" width="10" height="170" rx="3" fill="#ec4899"/></svg>`
+      },
+      "pearl-buttons": {
+        id: "pearl-buttons",
+        title: "New Bright Premium Natural Mother of Pearl Shirt Buttons with 4 Holes (100 Pieces)",
+        category: "Buttons",
+        discount: "-66%",
+        price: 120,
+        originalPrice: 350,
+        dealText: "Artisan Selection",
+        rating: "4.9",
+        reviews: "3,810",
+        material: "Natural River Shell / Resin Pearl Finish",
+        size: "18L (11.5mm) Standard Kurta & Shirt",
+        stock: 850,
+        colors: "Lustrous Off-White Pearl",
+        desc: "Exquisite shell pearl buttons featuring four precision drilled holes with smooth chamfered edges to prevent thread fraying during daily machine washes. Ideal for formal shirts, designer kurtas, suits, and sherwanis.",
+        variants: [
+          { title: "100 Pieces Pack", price: 120, originalPrice: 350 },
+          { title: "250 Pieces Pack", price: 280, originalPrice: 800 },
+          { title: "500 Pieces Wholesale", price: 520, originalPrice: 1500 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><circle cx="100" cy="100" r="70" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3"/><circle cx="100" cy="100" r="54" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/><circle cx="85" cy="85" r="7" fill="#475569"/><circle cx="115" cy="85" r="7" fill="#475569"/><circle cx="85" cy="115" r="7" fill="#475569"/><circle cx="115" cy="115" r="7" fill="#475569"/></svg>`
+      },
+      "knitting-yarn": {
+        id: "knitting-yarn",
+        title: "ProKart Premium Acrylic Soft Knitting Yarn / Crochet Wool Skeins (Pack of 4)",
+        category: "Threads",
+        discount: "-72%",
+        price: 199,
+        originalPrice: 720,
+        dealText: "Special Workshop Deal",
+        rating: "4.7",
+        reviews: "954",
+        material: "100% Anti-Pilling Cashmere Feel Acrylic",
+        size: "4 Ply / 100g each Skein",
+        stock: 320,
+        colors: "Cream White, Pastel Pink, Sky Blue, Mustard",
+        desc: "Feather-soft and durable knitting yarn suitable for sweaters, mufflers, baby booties, crochet lace borders and artisanal craft accessories. Colorfast guarantee through cold and warm water washing.",
+        variants: [
+          { title: "Set of 4 Skeins (400g)", price: 199, originalPrice: 720 },
+          { title: "Set of 8 Skeins (800g)", price: 379, originalPrice: 1400 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><ellipse cx="100" cy="100" rx="65" ry="60" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/><path d="M 45,75 Q 100,50 155,75" fill="none" stroke="#eab308" stroke-width="5" stroke-linecap="round"/><rect x="55" y="80" width="90" height="40" rx="5" fill="#0284c7"/></svg>`
+      },
+      "elastic-1inch": {
+        id: "elastic-1inch",
+        title: "1-Inch Heavy Duty Woven Elastic Band Roll for Pants, Skirts & Lehengas (10 Meters)",
+        category: "Elastic",
+        discount: "-44%",
+        price: 149,
+        originalPrice: 269,
+        dealText: "Boutique Essential",
+        rating: "4.6",
+        reviews: "612",
+        material: "Natural Latex & Woven Polyester Fiber",
+        size: "Width: 1 Inch (25mm) x Length: 10m",
+        stock: 450,
+        colors: "Optic White & Midnight Black",
+        desc: "Heavy duty non-roll woven elastic with exceptional stretch recovery. Ideal for waistbands in pants, track pants, pajamas, lehenga skirts, and maternity dresses.",
+        variants: [
+          { title: "10 Meters Roll", price: 149, originalPrice: 269 },
+          { title: "25 Meters Roll", price: 320, originalPrice: 600 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><circle cx="100" cy="100" r="75" fill="#f8fafc" stroke="#cbd5e1" stroke-width="6"/><circle cx="100" cy="100" r="50" fill="#e2e8f0"/><circle cx="100" cy="100" r="25" fill="#ffffff" stroke="#94a3b8" stroke-width="4"/></svg>`
+      },
+      "scissors-10inch": {
+        id: "scissors-10inch",
+        title: "Professional Heavy-Duty 10-Inch Tailoring Shears Fabric Cutting Scissors with Golden Handle",
+        category: "Cutting",
+        discount: "-62%",
+        price: 499,
+        originalPrice: 1299,
+        dealText: "Master Tailor Choice",
+        rating: "4.9",
+        reviews: "2,190",
+        material: "Forged High-Carbon Stainless Steel",
+        size: "10 Inches Full Size Tailor Shear",
+        stock: 180,
+        colors: "Gold Brass Handle / Polished Chrome Blade",
+        desc: "Forged carbon steel blades hardened and tempered to razor edge sharpness. The bent handle offset design allows fabric to lie flat on the cutting table while cutting multiple layers effortlessly.",
+        variants: [
+          { title: "10-Inch Master Shear", price: 499, originalPrice: 1299 },
+          { title: "12-Inch Heavy Duty Industrial", price: 699, originalPrice: 1799 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><ellipse cx="60" cy="145" rx="22" ry="30" fill="none" stroke="#f59e0b" stroke-width="9"/><ellipse cx="140" cy="145" rx="22" ry="30" fill="none" stroke="#f59e0b" stroke-width="9"/><path d="M 72,125 L 140,30 L 130,25 L 64,115 Z" fill="#94a3b8"/><path d="M 128,125 L 60,30 L 70,25 L 136,115 Z" fill="#cbd5e1"/></svg>`
+      },
+      "threads-box": {
+        id: "threads-box",
+        title: "All-Purpose Spun Polyester Sewing Machine Threads Box (Set of 40 Vibrant Colors, 250m each)",
+        category: "Threads",
+        discount: "-55%",
+        price: 249,
+        originalPrice: 550,
+        dealText: "Artisan Selection",
+        rating: "4.8",
+        reviews: "5,430",
+        material: "100% Spun Polyester (Lint-Free)",
+        size: "40 Spools x 250 Meters each",
+        stock: 260,
+        colors: "40 Assorted Sewing Colors with White & Black",
+        desc: "High tensile strength spun polyester thread for domestic and industrial sewing machines. Resists breakage, knots, and lint accumulation.",
+        variants: [
+          { title: "Box of 40 Spools", price: 249, originalPrice: 550 },
+          { title: "Box of 80 Spools Jumbo", price: 469, originalPrice: 999 }
+        ],
+        svg: `<svg viewBox="0 0 200 200" width="100%" height="100%"><rect x="30" y="40" width="35" height="70" rx="5" fill="#ef4444"/><rect x="82" y="30" width="35" height="70" rx="5" fill="#3b82f6"/><rect x="135" y="45" width="35" height="70" rx="5" fill="#22c55e"/></svg>`
+      }
+    };
+
+    let activeProduct = null;
+    let selectedVariantIdx = 0;
+    let qty = 1;
+
+    async function loadProductDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+
+      if (!id && localProducts['zip-8inch']) {
+        renderProduct(localProducts['zip-8inch']);
+        return;
+      }
+
+      // Try fetching from live API first
+      try {
+        const res = await apiFetch(`${API_ENDPOINTS.productDetail(id)}?project_id=${PROJECT_ID}`);
+        if (!res || !res.ok) throw new Error('API product not found');
+        const p = await res.json();
+        
+        const variants = (p.variants && p.variants.length > 0) ? p.variants.map(v => ({
+          title: v.title || '1 Unit',
+          price: v.price_minor_units ? Math.round(v.price_minor_units / 100) : (parseFloat(v.price) || 299),
+          originalPrice: v.compare_at_price_minor_units ? Math.round(v.compare_at_price_minor_units / 100) : ((parseFloat(v.price) || 299) + 100),
+          stock: v.stock_quantity || 99
+        })) : [{ title: 'Standard', price: 299, originalPrice: 399, stock: 99 }];
+
+        const firstV = variants[0];
+        const discountPct = Math.max(10, Math.round(((firstV.originalPrice - firstV.price) / firstV.originalPrice) * 100));
+
+        const formatted = {
+          id: p.id,
+          title: p.title,
+          category: "Tailoring Accessories",
+          discount: `-${discountPct}%`,
+          price: firstV.price,
+          originalPrice: firstV.originalPrice,
+          dealText: "Verified Store Stock",
+          rating: p.rating_avg || "4.8",
+          reviews: p.rating_count ? `${p.rating_count}` : "85",
+          material: "Industrial Quality Sewing Standard",
+          size: "Standard Commercial Spec",
+          stock: firstV.stock,
+          colors: "Multiple Options",
+          desc: p.description || "Premium grade accessory manufactured for apparel craftsmen and tailoring houses.",
+          images: p.images || [],
+          image: p.images && p.images[0] ? p.images[0].src : null,
+          variants
+        };
+
+        renderProduct(formatted);
+      } catch (err) {
+        console.warn('API product not found or offline, checking local catalog:', err);
+        if (id && localProducts[id]) {
+          renderProduct(localProducts[id]);
+        } else {
+          renderProduct(localProducts['zip-8inch']);
+        }
+      }
+    }
+
+    function renderProduct(p) {
+      activeProduct = p;
+      document.title = `${p.title} | New Bright Button Palace`;
+      document.getElementById('breadcrumbTitle').innerText = p.title.substring(0, 32) + '...';
+
+      let mediaHtml = '';
+      if (p.svg) {
+        mediaHtml = p.svg;
+      } else if (p.image) {
+        mediaHtml = `<img src="${p.image}" alt="${p.title}" id="detailMainImg" style="width:100%; height:100%; object-fit:contain;">`;
+      } else {
+        mediaHtml = `<div style="font-size:64px;">🔘</div>`;
+      }
+
+      const variants = p.variants || [{ title: 'Standard', price: p.price, originalPrice: p.originalPrice }];
+      const currentV = variants[selectedVariantIdx] || variants[0];
+
+      const content = document.getElementById('productDetailContent');
+      content.innerHTML = `
+        <div class="prod-detail-grid">
+          <!-- Left: Gallery Media Box -->
+          <div>
+            <div class="gallery-main" id="galleryMainBox">
+              ${mediaHtml}
+            </div>
+            ${p.images && p.images.length > 1 ? `
+              <div class="gallery-thumbs">
+                ${p.images.map((img, idx) => `
+                  <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="switchImage('${img.src}', this)">
+                    <img src="${img.src}" alt="Thumb">
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Right: Details, Variant Selector, Actions -->
+          <div>
+            <span class="prod-category-tag" style="font-size:11px;">${p.category}</span>
+            <h1 style="font-family:var(--font-display); font-size: clamp(18px, 4vw, 24px); font-weight:800; line-height:1.25; margin: 4px 0 8px;">
+              ${p.title}
+            </h1>
+
+            <div class="prod-rating" style="margin-bottom:12px;">
+              <span class="prod-stars">★★★★★</span>
+              <span class="prod-count">${p.rating} (${p.reviews} verified tailoring reviews)</span>
+              <span style="margin: 0 8px; color:#cbd5e1;">|</span>
+              <span class="stock-pill ${p.stock > 0 ? 'stock-in' : 'stock-out'}">
+                ${p.stock > 0 ? `✓ In Stock (${p.stock} units)` : 'Out of Stock'}
+              </span>
+            </div>
+
+            <!-- Price Row -->
+            <div class="prod-price-row" style="margin-bottom: 14px;">
+              <span class="discount-badge" id="detailDiscountBadge">${p.discount}</span>
+              <span class="current-price" style="font-size: 24px;"><span class="currency">₹</span><span id="detailPrice">${currentV.price}</span></span>
+              <span class="original-price" id="detailOriginalPrice" style="font-size: 15px;">₹${currentV.originalPrice}</span>
+              <span style="font-size:12px; color:#059669; font-weight:700; margin-left:6px;">Inclusive of all GST</span>
+            </div>
+
+            <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 16px;">
+              ${p.desc}
+            </p>
+
+            <!-- Variant Selector -->
+            <div style="margin-bottom: 18px;">
+              <label class="form-label" style="font-size:11.5px;">Select Package / Variant</label>
+              <div class="variant-pills-wrap">
+                ${variants.map((v, idx) => `
+                  <button class="variant-pill ${idx === selectedVariantIdx ? 'active' : ''}" onclick="selectVariant(${idx})">
+                    ${v.title}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Quantity Selector & Action Buttons -->
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom: 20px; flex-wrap:wrap;">
+              <div style="display:flex; align-items:center; border:2px solid #cbd5e1; border-radius:8px; padding:4px 8px; background:#fff;">
+                <button onclick="changeDetailQty(-1)" style="border:none; background:none; font-size:18px; font-weight:800; cursor:pointer; width:28px;">-</button>
+                <span id="detailQtyNum" style="font-weight:800; font-size:14px; min-width:24px; text-align:center;">1</span>
+                <button onclick="changeDetailQty(1)" style="border:none; background:none; font-size:18px; font-weight:800; cursor:pointer; width:28px;">+</button>
+              </div>
+
+              <button class="btn-checkout" onclick="addCurrentToCart()" style="flex:1; min-width:180px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add to Cart
+              </button>
+
+              <button class="btn-checkout" onclick="buyNowCurrent()" style="background:#0f172a; flex:1; min-width:140px;">
+                ⚡ Buy Now
+              </button>
+            </div>
+
+            <!-- Specs Table -->
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:14px; margin-bottom:20px;">
+              <h4 style="font-size:13px; font-weight:800; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">Product Specifications</h4>
+              <table class="modal-specs-table" style="margin:0;">
+                <tr><td>Category</td><td>${p.category}</td></tr>
+                <tr><td>Material</td><td>${p.material || 'Premium Industrial Grade'}</td></tr>
+                <tr><td>Size / Count</td><td>${p.size || 'Standard'}</td></tr>
+                <tr><td>Dispatch</td><td><span style="color:#059669; font-weight:700;">Within 24 Hours</span></td></tr>
+                <tr><td>Wholesale Pricing</td><td>Available for Bulk Inquiries (Call or WhatsApp)</td></tr>
+              </table>
+            </div>
+
+            <!-- WhatsApp Direct Help -->
+            <a href="https://api.whatsapp.com/send?phone=919876543210&text=Hello! I am inquiring about product: ${encodeURIComponent(p.title)}" class="btn-whatsapp" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.776.819 2.796.819 3.179 0 5.765-2.586 5.765-5.766.001-3.18-2.585-5.766-5.765-5.766zm9.969 5.766c0 5.485-4.467 9.953-9.969 9.953-1.745 0-3.38-.456-4.812-1.251l-5.219 1.36 1.393-5.088c-.896-1.492-1.401-3.237-1.401-5.092 0-5.484 4.467-9.953 9.969-9.953 5.502 0 9.969 4.469 9.969 9.953z"/></svg>
+              Inquire Wholesale Rate via WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function switchImage(src, thumbEl) {
+      const img = document.getElementById('detailMainImg');
+      if (img) img.src = src;
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      if (thumbEl) thumbEl.classList.add('active');
+    }
+
+    function selectVariant(idx) {
+      selectedVariantIdx = idx;
+      document.querySelectorAll('.variant-pill').forEach((pill, i) => {
+        if (i === idx) pill.classList.add('active');
+        else pill.classList.remove('active');
+      });
+
+      if (!activeProduct || !activeProduct.variants) return;
+      const v = activeProduct.variants[idx];
+      if (!v) return;
+
+      document.getElementById('detailPrice').innerText = v.price;
+      document.getElementById('detailOriginalPrice').innerText = `₹${v.originalPrice}`;
+      const discountPct = Math.max(10, Math.round(((v.originalPrice - v.price) / v.originalPrice) * 100));
+      document.getElementById('detailDiscountBadge').innerText = `-${discountPct}%`;
+    }
+
+    function changeDetailQty(delta) {
+      qty = Math.max(1, qty + delta);
+      const el = document.getElementById('detailQtyNum');
+      if (el) el.innerText = qty;
+    }
+
+    function addCurrentToCart() {
+      if (!activeProduct) return;
+      const variants = activeProduct.variants || [];
+      const v = variants[selectedVariantIdx] || {};
+
+      CartManager.addToCart({
+        id: activeProduct.id,
+        title: activeProduct.title,
+        name: activeProduct.title,
+        variant: v.title || '1 Unit',
+        price: v.price || activeProduct.price,
+        originalPrice: v.originalPrice || activeProduct.originalPrice,
+        image: activeProduct.image || null,
+        svg: activeProduct.svg || null,
+        qty: qty
+      });
+    }
+
+    function buyNowCurrent() {
+      addCurrentToCart();
+      window.location.href = 'checkout.html';
+    }
+
+    // Sync navbar account
+    function syncAccountUI() {
+      if (typeof isUserLoggedIn === 'function' && isUserLoggedIn()) {
+        const email = getUserEmail();
+        const firstName = sessionStorage.getItem('loginFirstName') || email.split('@')[0] || 'Profile';
+        const headerBtn = document.getElementById('headerAccountBtn');
+        const headerText = document.getElementById('headerAccountText');
+        const mobileTab = document.getElementById('mobileAccountTab');
+        if (headerBtn) headerBtn.href = 'profile.html';
+        if (headerText) headerText.textContent = firstName.length > 8 ? firstName.substring(0, 8) + '..' : firstName;
+        if (mobileTab) mobileTab.href = 'profile.html';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      syncAccountUI();
+      loadProductDetail();
+    });
+  </script>
+</body>
+</html>
